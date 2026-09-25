@@ -1,0 +1,31 @@
+% 第一步选层次，第二步选学位类型；工程专项硕士再选论文类型。
+% degree-level: doctor 博士 / master 硕士
+% degree-type: academic 学术 / professional 专业 / interdisciplinary 学科交叉
+%              equivalent 同等学力 / engineering 工程硕博士培养改革专项（仅硕士）
+% engineering-type: research 专题研究 / design 方案设计 / case 案例分析
+%                   survey 调研报告 / product 产品设计（作品创作）
+\SDUsetup{
+  degree-level = doctor,
+  degree-type = professional,
+  engineering-type = research
+}
+
+% 只需替换花括号中的文字。请勿删除命令和花括号。
+\newcommand\SDUtitle{在此填写中文论文题目}
+\newcommand\SDUtitleEN{Insert the English Title of the Dissertation Here}
+\newcommand\SDUauthor{作者姓名}
+\newcommand\SDUschool{培养单位名称}
+\newcommand\SDUtraining{全日制} % 请按实际培养方式填写，如非全日制
+\newcommand\SDUmajor{专业名称}
+\newcommand\SDUsupervisor{导师姓名\quad 职称}
+\newcommand\SDUcosupervisor{} % 没有合作导师时留空，保留官方空栏；有则填写姓名和职称
+\newcommand\SDUid{学号}
+\newcommand\SDUclassification{分类号}
+\newcommand\SDUsecrecy{公开}
+\newcommand\SDUdate{20XX 年\quad XX 月\quad XX 日}
+% 默认保留封面及内容相同的扉页。已有印制封面时，可关闭第一项。
+\newif\ifSDUprintcover \SDUprintcovertrue
+\newif\ifSDUtitlepage \SDUtitlepagetrue
+% 原稿没有独立图表目录；为方便使用，这里默认开启，可改为 false。
+\newif\ifSDUlists \SDUliststrue
+\newif\ifSDUforeignpaper \SDUforeignpaperfalse

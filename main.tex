@@ -1,0 +1,39 @@
+% !TeX program = xelatex
+% 便携字体：\documentclass[portable]{sdu-thesis}
+% 学位层次及类型在 metadata.tex 选择；所有非空正文页均按规范使用校名页眉。
+\documentclass{sdu-thesis}
+\input{metadata}
+\hypersetup{pdftitle={\SDUtitle},pdfauthor={\SDUauthor}}
+\begin{document}
+\pagestyle{empty}
+\hypersetup{pageanchor=false}
+\ifSDUprintcover\SDUcover\fi
+\ifSDUtitlepage\SDUcover\fi
+\input{frontmatter/declaration}
+\SDUfrontmatter
+\hypersetup{pageanchor=true}
+\input{frontmatter/abstracts}
+\SDUcontents
+\ifSDUlists\SDUfigurelists\SDUtablelists\fi
+\input{frontmatter/symbols}
+\SDUmainmatter
+\include{chapters/ch01} % 正式使用时将第一章说明改写为自己的绪论
+% 【正式交稿前必须关闭】在下一行行首加 %，即可移除第二章规范；后续编号自动更新。
+\input{chapters/guide}
+\include{chapters/ch02}
+\include{chapters/ch03}
+\include{chapters/ch04}
+\include{chapters/ch05}
+\include{chapters/ch06}
+\include{chapters/ch07}
+\appendix
+\input{backmatter/appendix}
+\backmatter
+\bibliographystyle{gbt7714-numerical}
+\bibliography{references}
+\input{backmatter/acknowledgements}
+\input{backmatter/achievements}
+\input{backmatter/projects}
+\input{backmatter/defense}
+\ifSDUforeignpaper\input{backmatter/foreign-paper}\fi
+\end{document}
